@@ -13,8 +13,8 @@ var speech = {
 		"googleApi" : "Url for google Api (example.com/img.png)"
 	},
 	mess : {
-		"sorry_we_didnt_hear_you" : "Sorry we didn't hear you :( please try again.",
-		"the_microphone_is_not_enabled" : "The microphone is not enabled please enable it, if you want to use the function."
+		"noInput" : "Please try again.",
+		"noMic" : "The microphone is not enabled."
 	},
 	_this : null,
 	getTextToSpeechId : function () {
@@ -33,7 +33,7 @@ var speech = {
 					speech.Mic.set();
 				})
 				.catch(function(err) {
-				  	speech.setModelText(speech.mess.the_microphone_is_not_enabled);
+				  	speech.setModelText(speech.mess.noMic);
 				  	$(speech.tags.neMes).modal('show');
 				});
 			}
@@ -44,7 +44,7 @@ var speech = {
 	},
 	showModule : function (status) {  
 		if (status != undefined && status == 3) { 
-			speech.setModelText(speech.mess.sorry_we_didnt_hear_you);
+			speech.setModelText(speech.mess.noInput);
 			$(this.tags.neMes).modal('show');
 			return;
 		}
