@@ -1,6 +1,6 @@
 # google-speech-to-text-api-js-helper
 
-This helper will get you up and running faste.
+This helper will get you up and running faster.
 
 1. You need to get recorder.js
   a. CDN ->> https://cdnjs.cloudflare.com/ajax/libs/recorderjs/0.1.0/recorder.min.js
